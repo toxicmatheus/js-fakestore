@@ -11,25 +11,28 @@
 <body>
     <header class="flex items-center justify-between px-15 py-4 bg-cyan-500">
         <div>
-            <input type="text" placeholder="Digite o nome do produto" class="w-120 h-10 rounded bg-white pl-4" />
+            <input onkeyup="pesquisarProdutos(event.target.value)" type="text" placeholder="Digite o nome do produto" class="w-120 h-10 rounded bg-white pl-4" />
         </div>
         <div>
-            <select id="categorias" class="h-10 rounded bg-white px-4">
-                <option>men's clothing</option>
-                <option>women's clothing</option>
-                <option>electronics</option>
-                <option>jewelery</option>
+            <select id="categorias" onchange="filtrarProdutos(event.target.value)" class="h-10 rounded bg-white px-4">
+                <option selected disabled>Selecione uma categoria</option>
+                <option>All</option>
+                <option>Men's clothing</option>
+                <option>Women's clothing</option>
+                <option>Electronics</option>
+                <option>Jewelery</option>
             </select>
-            <select id="ordenacao" class="h-10 rounded bg-white px-4">
-                <option value="preco">Ordernar por Preço</option>
-                <option value="nota">Ordernar por Avaliação</option>
+            <select id="ordenacao" onchange="ordenarProdutos(event.target.value)" class="h-10 rounded bg-white px-4 ml-4">
+                <option selected disabled>Ordenar produtos</option>
+                <option value="preco">Ordenar por Preço</option>
+                <option value="nota">Ordenar por Avaliação</option>
             </select>
         </div>
     </header>
 
     <main class="p-15 bg-slate-200">
         <div id="cards" class="grid grid-cols-4 gap-4">
-            <div class="bg-white rounded p-4">
+            <!-- <div class="bg-white rounded p-4">
                 <div class="relative">
                     <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png" alt="" class="w-full h-55 object-contain">
                     <div class="p-2 bg-cyan-500 text-white font-bold absolute top-3 right-3 rounded">4.0</div>
@@ -39,11 +42,11 @@
                     <h6 class="font-bold">categoria</h6>
                     <h6 class="text-right text-2xl">R$ 0.00</h6>
                 </div>
-            </div>
+            </div> -->
         </div>
     </main>
 
-    <script src="index.js"></script>
+    <script src="index2.js"></script>
 </body>
 
 </html>

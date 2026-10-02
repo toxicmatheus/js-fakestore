@@ -32,7 +32,6 @@ function carregarProdutos(produtos) {
                     R$ ${produto.price.toFixed(2)}
                 </h6>
             </div>
-
         </div>
     `).join("");
 }
