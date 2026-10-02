@@ -4,39 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>loja</title>
+    <title>Fakestore</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-<header class=" flex items-center justify-between px-15 py-4 bg-cyan-500">
-    <div>
-        <input class="w-120 h-10 rounded bg-white pl-4" type="text" placeholder="Digite o nome do produto">
-    </div>
-    <div>
-        <select id="categorias">
-            <option>Men's clothing</option>
-            <option>Women's clothing</option>
-            <option>Electronics</option>
-            <option>Jewelry</option>
-        </select>
-        <select id="ordenacao">
-            <option value="preco">Ordenar por Preço</option>
-            <option value="nota">Ordenar por Avaliação</option>
-        </select>
-    </div>
-</header>
 
-<main class="p-15 bg-slate-100">
-    <div id = "cards" class="grid grid-cols-4 gap-4">
-        <div class="bg-white p-4 rounded shadow">
-            <div class="relative">
-                <img src="" alt="" class="h-55 object-contain">
-                <div class="p-2 bg-cyan-500 text-white font-bold">4.0</div>
+<body>
+    <header class="flex items-center justify-between px-15 py-4 bg-cyan-500">
+        <div>
+            <input type="text" placeholder="Digite o nome do produto" class="w-120 h-10 rounded bg-white pl-4" />
+        </div>
+        <div>
+            <select id="categorias" class="h-10 rounded bg-white px-4">
+                <option>men's clothing</option>
+                <option>women's clothing</option>
+                <option>electronics</option>
+                <option>jewelery</option>
+            </select>
+            <select id="ordenacao" class="h-10 rounded bg-white px-4">
+                <option value="preco">Ordernar por Preço</option>
+                <option value="nota">Ordernar por Avaliação</option>
+            </select>
+        </div>
+    </header>
+
+    <main class="p-15 bg-slate-200">
+        <div id="cards" class="grid grid-cols-4 gap-4">
+            <div class="bg-white rounded p-4">
+                <div class="relative">
+                    <img src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png" alt="" class="w-full h-55 object-contain">
+                    <div class="p-2 bg-cyan-500 text-white font-bold absolute top-3 right-3 rounded">4.0</div>
+                </div>
+                <div class="pt-4">
+                    <h2 class="font-semibold text-xl">Nome do produto</h2>
+                    <h6 class="font-bold">categoria</h6>
+                    <h6 class="text-right text-2xl">R$ 0.00</h6>
+                </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 
-<script src="index.js"></script>
+    <script src="index.js"></script>
 </body>
+
 </html>
